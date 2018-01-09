@@ -1,15 +1,22 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Main from '@/components/Main'
+import Sample from '@/components/sample/Sample'
+import {routerMap} from './router-map'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    }
+      path: routerMap.ROOT_PATH,
+      name: 'Main',
+      component: Main
+    },
+    {
+      path: routerMap.SAMPLE_PATH,
+      name: 'Sample',
+      component: Sample
+    },
   ]
 })
